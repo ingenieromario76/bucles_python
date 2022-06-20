@@ -28,14 +28,21 @@ print('Comenzamos a ponernos serios!')
 # Empezar aquí la resolución del ejercicio
 
 # inicio = ....
+inicio = int(input("Porfa ingrese el primer valor de la lista:"))
 # fin = ....
+fin = int(input("Porfa ingrese el último valor de la lista:"))
 
 # cantidad_numeros ....
 # sumatoria ....
-
+suma = 0
+cantidad = 0
 # bucle.....
-
+for num in range(inicio,fin+1):
+    suma += num
+    cantidad += 1
 # Al terminar el bucle calcular el promedio como:
 # promedio = sumatoria / cantidad_numeros
-
+promedio= suma / cantidad
+print("Se ingresaron {} numeros".format(cantidad))
 # Imprimir resultado en pantalla
+print("El promedio de los elementos de la lista es {}".format(promedio))

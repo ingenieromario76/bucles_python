@@ -35,3 +35,40 @@ alguno de lo soportados o no es la palabra "FIN".
 
 print("Mi Calculadora (^_^)")
 # Empezar aquí la resolución del ejercicio
+terminar= ''
+while terminar.upper() != "FIN":
+    num_1 = int(input("Ingrese un número: "))
+    num_2 = int(input("Ingrese otro número: "))
+    operacion= str(input("Operación a realizar? (+,-,*,/,**):"))
+    while operacion not in ['+','-','*','/','**']:
+        print("Operación no reconocida")
+        operacion= str(input("Operación a realizar? (+,-,*,/,**):"))
+    if operacion == '+':
+        print("Operación seleccionada: SUMA")
+        suma = num_1 + num_2
+        print("{} + {}= {}".format(num_1,num_2,suma))
+    elif operacion == '-':
+        print("Operación seleccionada: RESTA")
+        resta = num_1 - num_2
+        print("{} - {}= {}".format(num_1,num_2,resta))
+    elif operacion == '*':
+        print("Operación seleccionada: MULTIPLICACION")
+        producto = num_1 * num_2
+        print("{} * {}= {}".format(num_1,num_2,producto))
+    elif operacion == '/':
+        print("Operación seleccionada: DIVISION")
+        if num_2 != 0:
+            division = num_1 / num_2
+            print("{} / {}= {}".format(num_1,num_2,division))
+        else:
+            print("No se puede dividir por CERO")
+    else:
+        print("Operación seleccionada: POTENCIA")
+        if num_1 == 0 and num_2 == 0:
+            print("0 ^ 0 NO SE PUEDE CALCULAR")
+        else:
+            potencia = num_1 ** num_2
+            print("{} ^ {}= {}".format(num_1,num_2,potencia))
+    terminar= str(input("Desea realizar otro cálculo? (Enter para otro cálculo -- Escriba FIN para FINALIZAR):"))
+
+print("Fin del Programa! Saludos!")
